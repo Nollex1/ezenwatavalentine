@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ezenwata Valentine — Developer & Creator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+
+<!-- ========== NAVBAR ========== -->
+<header class="nav" id="nav">
+  <a href="#" class="logo">EV<span>.</span></a>
+  <nav class="nav-links">
+    <a href="#about">About</a>
+    <a href="#work">Work</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+    <a href="resume.pdf" class="nav-resume" target="_blank">Resume ↗</a>
+  </nav>
+  <button class="nav-ham" id="ham" aria-label="menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="mob-nav" id="mobNav">
+  <button class="mob-close" id="mobClose">&#x2715;</button>
+  <a href="#about" onclick="closeMob()">About</a>
+  <a href="#work" onclick="closeMob()">Work</a>
+  <a href="#experience" onclick="closeMob()">Experience</a>
+  <a href="#contact" onclick="closeMob()">Contact</a>
+  <a href="resume.pdf" target="_blank">Resume ↗</a>
+</div>
+
+<!-- ========== HERO ========== -->
+<section class="hero">
+  <div class="hero-blob b1"></div>
+  <div class="hero-blob b2"></div>
+  <div class="hero-blob b3"></div>
+  <div class="hero-dots"></div>
+
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="live-dot"></span>
+      Open to work &amp; collaborations
+    </div>
+
+    <h1 class="hero-h1">
+      <span class="line-wrap"><span class="line-in">Hi, I'm</span></span>
+      <span class="line-wrap"><span class="line-in name-line">Ezenwata <em>Valentine</em></span></span>
+    </h1>
+
+    <div class="hero-sub-line">
+      <span class="typed-prefix">I build </span>
+      <span class="typed-word" id="typedWord"></span>
+      <span class="typed-cursor">|</span>
+    </div>
+
+    <p class="hero-desc">
+      Full-stack developer &amp; digital creator — crafting web apps, mobile apps, and
+      blockchain solutions that actually solve problems. Based in Nigeria, building for the world.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#work" class="btn-blue">Explore My Work</a>
+      <a href="#contact" class="btn-outline">Let's Talk →</a>
+    </div>
+
+    <div class="hero-socials">
+      <a href="https://tiktok.com/@devnollex" target="_blank" class="hsoc tiktok-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.17 8.17 0 004.77 1.52V6.76a4.85 4.85 0 01-1-.07z"/></svg>
+        @devnollex
+      </a>
+      <a href="https://github.com/Nollex1" target="_blank" class="hsoc">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 002 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z"/></svg>
+        GitHub
+      </a>
+      <a href="https://linkedin.com/in/Ezenwata-valentine" target="_blank" class="hsoc">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+        LinkedIn
+      </a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="hst"><span class="hst-n">10+</span><span class="hst-l">Projects Built</span></div>
+      <div class="hst-div"></div>
+      <div class="hst"><span class="hst-n">3+</span><span class="hst-l">Years Coding</span></div>
+      <div class="hst-div"></div>
+      <div class="hst"><span class="hst-n">4</span><span class="hst-l">Tech Domains</span></div>
+    </div>
+  </div>
+
+  <div class="hero-img-col">
+    <div class="profile-ring">
+      <div class="profile-ring-inner">
+        <img src="Ezenwata.jpg" alt="Ezenwata Valentine"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+        <div class="profile-fallback">EV</div>
+      </div>
+      <div class="float-badge fb1">⚛️ React</div>
+      <div class="float-badge fb2">🔗 Web3</div>
+      <div class="float-badge fb3">📱 Flutter</div>
+      <div class="float-badge fb4">💡 Solidity</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ABOUT ========== -->
+<section id="about" class="section about-sec">
+  <div class="container">
+    <span class="section-label">01 / About Me</span>
+    <div class="about-grid">
+      <div class="about-text">
+        <h2 class="sec-h2">The Story Behind<br>the Developer</h2>
+        <p>I'm <strong>Valentine</strong> — a full-stack developer and digital creator who started his journey in 2023 with a curiosity for video editing and design. That spark grew into a deep passion for building real digital products that make an impact.</p>
+        <p>From real estate clones to blockchain dApps, RPG games to mobile apps — I've built across the full spectrum of modern tech. I care about clean code, great UX, and shipping things that actually work.</p>
+        <p>Beyond the code, I create content on TikTok (<a href="https://tiktok.com/@devnollex" target="_blank" class="inline-link">@devnollex</a>) sharing my developer journey and inspiring the next generation of African tech builders.</p>
+
+        <div class="tech-section">
+          <p class="tech-label">Technologies I work with</p>
+          <div class="tech-chips">
+            <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>React.js</span>
+            <span>Flutter</span><span>Solidity</span><span>Node.js</span><span>REST APIs</span>
+            <span>Web3.js</span><span>Git & GitHub</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-card-col">
+        <div class="about-info-card">
+          <div class="aic-top">
+            <div class="aic-avatar">
+              <img src="Ezenwata.jpg" alt="Valentine"
+                   onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+              <div class="aic-fallback">EV</div>
+            </div>
+            <div>
+              <h3>Ezenwata Valentine</h3>
+              <p>Full-Stack & Web3 Developer</p>
+            </div>
+          </div>
+          <div class="aic-divider"></div>
+          <div class="aic-facts">
+            <div class="aic-fact"><span>📍</span> Nigeria</div>
+            <div class="aic-fact"><span>💼</span> Open to Work</div>
+            <div class="aic-fact"><span>🎓</span> Self-taught Developer</div>
+            <div class="aic-fact"><span>🎬</span> TikTok Content Creator</div>
+          </div>
+          <div class="aic-divider"></div>
+          <div class="aic-socials">
+            <a href="https://tiktok.com/@devnollex" target="_blank" class="aic-soc tiktok">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.17 8.17 0 004.77 1.52V6.76a4.85 4.85 0 01-1-.07z"/></svg>
+              @devnollex
+            </a>
+            <a href="https://github.com/Nollex1" target="_blank" class="aic-soc">GitHub ↗</a>
+            <a href="https://linkedin.com/in/Ezenwata-valentine" target="_blank" class="aic-soc">LinkedIn ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== EXPERIENCE ========== -->
+<section id="experience" class="section exp-sec">
+  <div class="container">
+    <span class="section-label">02 / Experience</span>
+    <h2 class="sec-h2">Where I've Built &amp; Grown</h2>
+
+    <div class="timeline">
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-top">
+            <div><h3>Freelance Developer</h3><span class="tl-co">Upwork</span></div>
+            <span class="tl-date">June 2025 — Present</span>
+          </div>
+          <p>Delivering full-cycle client projects — from scoping to deployment. Specializing in React web apps, responsive sites, and Web3 integrations for international clients.</p>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-top">
+            <div><h3>TikTok Developer Creator</h3><span class="tl-co">@devnollex</span></div>
+            <span class="tl-date">2024 — Present</span>
+          </div>
+          <p>Creating developer content that educates and inspires — covering web development, coding tips, project builds, and the African tech scene. Growing a community of aspiring developers.</p>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-top">
+            <div><h3>Technical Writer & Developer</h3><span class="tl-co">Hashnode</span></div>
+            <span class="tl-date">2024</span>
+          </div>
+          <p>Built and documented a highly responsive website while publishing technical articles combining real-world code examples with practical developer insights.</p>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-top">
+            <div><h3>Frontend Developer Intern</h3><span class="tl-co">Internship Program</span></div>
+            <span class="tl-date">2024</span>
+          </div>
+          <p>Implemented responsive React.js interfaces for real clients. Delivered pixel-perfect, mobile-optimized websites that consistently exceeded client expectations.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PROJECTS ========== -->
+<section id="work" class="section work-sec">
+  <div class="container">
+    <span class="section-label">03 / Featured Work</span>
+    <h2 class="sec-h2">Projects That Show What I Can Do</h2>
+    <p class="sec-desc">A showcase of my best builds — web apps, mobile apps, blockchain, and games. Every project is a real, shipped product.</p>
+
+    <div class="projects-grid">
+
+      <!-- ★ NEW: Contractor & Real Estate Lead Engine ★ -->
+      <div class="proj-card big reveal">
+        <div class="proj-visual pv-leads">
+          <div class="leads-dash">
+            <div class="ld-header">
+              <div class="ld-logo">🏗️ LeadEngine CRM</div>
+              <div class="ld-live"><span class="live-d"></span>3 new leads today</div>
+            </div>
+            <div class="ld-stats">
+              <div class="ld-stat"><div class="ld-sn">50+</div><div class="ld-sl">Leads Closed</div></div>
+              <div class="ld-stat hot"><div class="ld-sn">12</div><div class="ld-sl">Hot Prospects</div></div>
+              <div class="ld-stat"><div class="ld-sn">6</div><div class="ld-sl">Active Clients</div></div>
+              <div class="ld-stat"><div class="ld-sn">$70K+</div><div class="ld-sl">Per Client</div></div>
+            </div>
+            <div class="ld-pipeline">
+              <div class="ld-pipe-label">Lead Pipeline</div>
+              <div class="ld-leads">
+                <div class="ld-lead hot-lead">
+                  <div class="ll-av" style="background:#ef4444">AR</div>
+                  <div class="ll-info">
+                    <div class="ll-name">Alex Revard</div>
+                    <div class="ll-detail">6-figure contractor deal • Closed ✓</div>
+                  </div>
+                  <div class="ll-tag hot-tag">🔥 Closed</div>
+                </div>
+                <div class="ld-lead">
+                  <div class="ll-av" style="background:#2563eb">FC</div>
+                  <div class="ll-info">
+                    <div class="ll-name">Fatima Chukwu</div>
+                    <div class="ll-detail">Office renovation • Abuja</div>
+                  </div>
+                  <div class="ll-tag warm-tag">⚡ Warm</div>
+                </div>
+                <div class="ld-lead">
+                  <div class="ll-av" style="background:#16a34a">BO</div>
+                  <div class="ll-info">
+                    <div class="ll-name">Bright Okonkwo</div>
+                    <div class="ll-detail">5-bed duplex • Port Harcourt</div>
+                  </div>
+                  <div class="ll-tag hot-tag">🔥 Hot</div>
+                </div>
+              </div>
+            </div>
+            <div class="ld-form-preview">
+              <div class="ld-fp-label">Auto-capture from website →</div>
+              <div class="ld-fp-row"><div class="ld-fp-field">Name</div><div class="ld-fp-field">Phone</div></div>
+              <div class="ld-fp-row"><div class="ld-fp-field wide">Property Interest</div></div>
+              <div class="ld-fp-btn">Submit Enquiry →</div>
+            </div>
+          </div>
+        </div>
+        <div class="proj-info">
+          <span class="proj-tag" style="background:#fff7ed;color:#c2410c;">Backend System</span>
+          <h3>Contractor & Real Estate Lead Engine</h3>
+          <p>A full backend system that transforms a static contractor or real estate website into an automated lead-generation machine. Enquiries from the website are captured, scored, and piped directly into a CRM dashboard — so agents and contractors never miss a deal.</p>
+          <div class="proj-feats">
+            <div class="pf"><span>🎯</span> Auto-capture website enquiries into CRM</div>
+            <div class="pf"><span>🔥</span> Lead scoring — Hot, Warm, Cold tracking</div>
+            <div class="pf"><span>📧</span> Instant email alerts for every new lead</div>
+            <div class="pf"><span>📊</span> Pipeline value & conversion dashboard</div>
+            <div class="pf"><span>🤖</span> Follow-up automation & reminders</div>
+          </div>
+          <div class="proj-stack-pills">
+            <span>Node.js</span><span>React.js</span><span>REST API</span><span>EmailJS</span><span>JavaScript</span>
+          </div>
+          <div class="proj-btns">
+            <a href="#" class="btn-blue sm">Live Demo ↗</a>
+            <a href="#contact" class="btn-outline sm">Build This for Me →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Udos Exchange App -->
+      <div class="proj-card big reveal">
+        <div class="proj-visual pv-exchange">
+          <div class="pv-phone">
+            <div class="ph-notch"></div>
+            <div class="ph-screen">
+              <div class="ex-header">
+                <div class="ex-logo">💱 Udos</div>
+                <div class="ex-rate-live"><span class="live-d"></span>Live</div>
+              </div>
+              <div class="ex-rate-card">
+                <div class="ex-rc-label">USD → NGN</div>
+                <div class="ex-rc-value">₦1,580<span>/dollar</span></div>
+                <div class="ex-rc-trend">↑ +2.3% today</div>
+              </div>
+              <div class="ex-pairs">
+                <div class="ex-pair"><span class="ex-flag">🇺🇸</span><span>USD/NGN</span><span class="ex-v up">1,580</span></div>
+                <div class="ex-pair"><span class="ex-flag">🇬🇧</span><span>GBP/NGN</span><span class="ex-v up">2,010</span></div>
+                <div class="ex-pair"><span class="ex-flag">🇪🇺</span><span>EUR/NGN</span><span class="ex-v dn">1,720</span></div>
+              </div>
+              <div class="ex-btn">Convert Now →</div>
+            </div>
+          </div>
+        </div>
+        <div class="proj-info">
+          <span class="proj-tag" style="background:#eff6ff;color:#2563eb;">Mobile App</span>
+          <h3>Udos Exchange App</h3>
+          <p>A real-time currency exchange mobile application showing live FX rates, conversion tools, and currency pair tracking — built for Nigerians and diaspora managing international money flows.</p>
+          <div class="proj-feats">
+            <div class="pf"><span>💱</span> Live FX rate tracking</div>
+            <div class="pf"><span>🔄</span> Currency converter tool</div>
+            <div class="pf"><span>📊</span> Rate trend charts</div>
+            <div class="pf"><span>🌍</span> Multi-currency support</div>
+          </div>
+          <div class="proj-stack-pills">
+            <span>Flutter</span><span>Dart</span><span>API Integration</span>
+          </div>
+          <div class="proj-btns">
+            <a href="#" class="btn-blue sm">Live Demo ↗</a>
+            <a href="#" class="btn-outline sm">GitHub ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Focus Reminder App -->
+      <div class="proj-card reveal">
+        <div class="proj-visual pv-focus">
+          <div class="pv-phone small">
+            <div class="ph-notch"></div>
+            <div class="ph-screen">
+              <div class="focus-header">🧠 FocusPro</div>
+              <div class="focus-timer">
+                <div class="timer-ring">
+                  <svg viewBox="0 0 80 80">
+                    <circle cx="40" cy="40" r="34" stroke="rgba(37,99,235,0.15)" stroke-width="6" fill="none"/>
+                    <circle cx="40" cy="40" r="34" stroke="#2563eb" stroke-width="6" fill="none"
+                      stroke-dasharray="213.6" stroke-dashoffset="53" stroke-linecap="round"
+                      style="transform:rotate(-90deg);transform-origin:center"/>
+                  </svg>
+                  <div class="timer-val">24:13</div>
+                </div>
+                <div class="focus-mode">🎯 Deep Work</div>
+              </div>
+              <div class="focus-tasks">
+                <div class="ftask done">✅ Morning review</div>
+                <div class="ftask done">✅ Code feature</div>
+                <div class="ftask active">⏳ Write tests</div>
+                <div class="ftask">○ Deploy update</div>
+              </div>
+              <div class="focus-btn">Start Session →</div>
+            </div>
+          </div>
+        </div>
+        <div class="proj-info">
+          <span class="proj-tag" style="background:#f0fdf4;color:#16a34a;">Productivity App</span>
+          <h3>Focus Reminder App</h3>
+          <p>A productivity mobile app with Pomodoro-style timers, task checklists, and session tracking to help developers and students stay in deep focus mode.</p>
+          <div class="proj-stack-pills"><span>Flutter</span><span>Local Storage</span><span>Dart</span></div>
+          <div class="proj-btns">
+            <a href="#" class="btn-blue sm">View App ↗</a>
+            <a href="#" class="btn-outline sm">GitHub ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tracking System -->
+      <div class="proj-card reveal">
+        <div class="proj-visual pv-track">
+          <div class="track-dash">
+            <div class="track-header">📦 TrackSys Dashboard</div>
+            <div class="track-stats">
+              <div class="tstat"><div class="tstat-n">142</div><div class="tstat-l">Orders</div></div>
+              <div class="tstat"><div class="tstat-n">98%</div><div class="tstat-l">On Time</div></div>
+              <div class="tstat"><div class="tstat-n">3</div><div class="tstat-l">Pending</div></div>
+            </div>
+            <div class="track-list">
+              <div class="track-item"><span class="ti-id">#TR-001</span><div class="ti-bar"><div class="ti-fill" style="width:85%"></div></div><span class="ti-status delivered">Delivered</span></div>
+              <div class="track-item"><span class="ti-id">#TR-002</span><div class="ti-bar"><div class="ti-fill" style="width:60%"></div></div><span class="ti-status transit">In Transit</span></div>
+              <div class="track-item"><span class="ti-id">#TR-003</span><div class="ti-bar"><div class="ti-fill" style="width:30%"></div></div><span class="ti-status pending">Processing</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="proj-info">
+          <span class="proj-tag" style="background:#fff7ed;color:#c2410c;">Web App</span>
+          <h3>Tracking System App</h3>
+          <p>A full-featured order and logistics tracking dashboard — with real-time status updates, order management, and a clean data interface for businesses managing deliveries.</p>
+          <div class="proj-stack-pills"><span>React.js</span><span>JavaScript</span><span>API</span></div>
+          <div class="proj-btns">
+            <a href="#" class="btn-blue sm">Live Demo ↗</a>
+            <a href="#" class="btn-outline sm">GitHub ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- RealtorPro -->
+      <div class="proj-card reveal">
+        <div class="proj-visual pv-realtor">
+          <div class="rl-ui">
+            <div class="rl-agent">
+              <div class="rl-av"></div>
+              <div class="rl-ainfo">
+                <div class="rl-aname"></div>
+                <div class="rl-asub"></div>
+              </div>
+              <div class="rl-stars">⭐ 4.9</div>
+            </div>
+            <div class="rl-map">
+              <div class="rl-map-grid"></div>
+              <div class="rl-pin" style="top:28%;left:22%">📍</div>
+              <div class="rl-pin" style="top:52%;left:60%">📍</div>
+              <div class="rl-pin" style="top:18%;left:72%">📍</div>
+            </div>
+            <div class="rl-cards">
+              <div class="rl-card"><div class="rl-cimg" style="background:linear-gradient(135deg,#1e40af,#3b82f6)"></div><div class="rl-cp">$485K</div></div>
+              <div class="rl-card"><div class="rl-cimg" style="background:linear-gradient(135deg,#065f46,#10b981)"></div><div class="rl-cp">$320K</div></div>
+              <div class="rl-card"><div class="rl-cimg" style="background:linear-gradient(135deg,#7c2d12,#f97316)"></div><div class="rl-cp">$710K</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="proj-info">
+          <span class="proj-tag" style="background:#eff6ff;color:#2563eb;">Frontend Clone</span>
+          <h3>RealtorPro Clone</h3>
+          <p>Production-level real estate agent profile — zero frameworks, pure HTML/CSS/JS. Features maps, listings, reviews, and full mobile responsiveness.</p>
+          <div class="proj-stack-pills"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+          <div class="proj-btns">
+            <a href="#" class="btn-blue sm">Live Demo ↗</a>
+            <a href="#" class="btn-outline sm">GitHub ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- QuestForge RPG -->
+      <div class="proj-card reveal">
+        <div class="proj-visual pv-game">
+          <div class="game-ui">
+            <div class="game-title-bar">⚔️ QuestForge RPG</div>
+            <div class="game-monster-row">
+              <div class="gm-name">🐉 Shadow Drake</div>
+              <div class="gm-hp-row">
+                <span>HP</span>
+                <div class="gm-bar"><div class="gm-fill"></div></div>
+                <span>62%</span>
+              </div>
+            </div>
+            <div class="game-log-mini">
+              <div class="gl-line hit">⚔️ You hit for <b>18 dmg!</b></div>
+              <div class="gl-line dmg">💥 Drake strikes — <b>-7 HP</b></div>
+              <div class="gl-line xp">✨ +35 XP</div>
+            </div>
+            <div class="game-act-row">
+              <div class="gact attack">Attack</div>
+              <div class="gact dodge">Dodge</div>
+              <div class="gact flee">Flee</div>
+            </div>
+          </div>
+        </div>
+        <div class="proj-info">
+          <span class="proj-tag" style="background:#faf5ff;color:#7c3aed;">Game Dev</span>
+          <h3>QuestForge RPG</h3>
+          <p>Full browser RPG — multiple locations, monster AI, weapon upgrades, XP system, and inventory. Built entirely in pure JavaScript.</p>
+          <div class="proj-stack-pills"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+          <div class="proj-btns">
+            <a href="#" class="btn-blue sm">Play Now ↗</a>
+            <a href="#" class="btn-outline sm">GitHub ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Web3 dApp -->
+      <div class="proj-card reveal">
+        <div class="proj-visual pv-web3">
+          <div class="w3-ui">
+            <div class="w3-top">
+              <span class="w3-name">⟠ DonateChain</span>
+              <span class="w3-conn"><span class="live-d"></span>0x3f...a9</span>
+            </div>
+            <div class="w3-balance">
+              <div class="w3-bl">Contract Balance</div>
+              <div class="w3-bv">12.84 ETH</div>
+            </div>
+            <div class="w3-txs">
+              <div class="w3-tx"><span>0xa4f...31b</span><span class="w3-amt">+0.10 ETH</span><span class="w3-ok">✓</span></div>
+              <div class="w3-tx"><span>0xb2e...77d</span><span class="w3-amt">+0.05 ETH</span><span class="w3-ok">✓</span></div>
+              <div class="w3-tx"><span>0xc91...4fa</span><span class="w3-amt">+0.25 ETH</span><span class="w3-ok">✓</span></div>
+            </div>
+            <div class="w3-net">🟢 STT Testnet</div>
+          </div>
+        </div>
+        <div class="proj-info">
+          <span class="proj-tag" style="background:#f0fdf4;color:#15803d;">Web3 / Blockchain</span>
+          <h3>Web3 Hackathon dApp</h3>
+          <p>Decentralized donation app on STT Testnet — MetaMask wallet integration, Solidity smart contract, and live on-chain transaction history.</p>
+          <div class="proj-stack-pills"><span>Solidity</span><span>JavaScript</span><span>Web3.js</span></div>
+          <div class="proj-btns">
+            <a href="#" class="btn-blue sm">Live dApp ↗</a>
+            <a href="#" class="btn-outline sm">GitHub ↗</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== PREMIUM GATE ========== -->
+<section class="gate-sec">
+  <div class="container">
+    <div class="gate-box">
+      <div class="gate-left">
+        <div class="gate-ico">🔐</div>
+        <h2>4 More Premium Projects<br><span>Waiting for You</span></h2>
+        <p>My remaining projects — including advanced mobile builds, API integrations, and more — are reserved for serious clients and collaborators.</p>
+        <div class="gate-list">
+          <div class="gl-item"><span>📱</span>Floriculture App (React + Flutter)</div>
+          <div class="gl-item"><span>🐟</span>Silvers Farm Platform</div>
+          <div class="gl-item"><span>♟️</span>RPG Chess Engine</div>
+          <div class="gl-item"><span>💳</span>Payment API Integration</div>
+          <div class="gl-item blur-item"><span>🔒</span>Project #11 — Coming Soon</div>
+          <div class="gl-item blur-item"><span>🔒</span>Project #12 — Coming Soon</div>
+        </div>
+      </div>
+      <div class="gate-right">
+        <div class="gate-card">
+          <div class="gc-badge">★★★★★ Client Portfolio</div>
+          <h3>Unlock Full Access</h3>
+          <p>Log in to see detailed case studies, live demos, and source code for every project.</p>
+          <button class="btn-blue full" onclick="openModal()">Request Access Now →</button>
+          <p class="gc-note">No credentials? <a onclick="closeModal(); scrollToContact()">Message me</a> and I'll send them within the hour.</p>
+          <div class="gc-trust"><span>🔒 Secure</span><span>📧 Tracked</span><span>⚡ Instant</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== LOGIN MODAL ========== -->
+<div class="modal-wrap" id="modal">
+  <div class="modal-box">
+    <button class="modal-x" onclick="closeModal()">&#x2715;</button>
+    <div class="modal-icon">🔐</div>
+    <h3>Client Portfolio Access</h3>
+    <p>Enter your credentials to unlock the full portfolio.</p>
+    <form onsubmit="doLogin(event)">
+      <div class="fg"><label>Email</label><input type="email" id="mEmail" placeholder="you@company.com" required /></div>
+      <div class="fg"><label>Password</label><input type="password" id="mPass" placeholder="Access password" required /></div>
+      <div class="m-err" id="mErr"></div>
+      <button type="submit" class="btn-blue full" style="margin-top:4px">Unlock Portfolio →</button>
+    </form>
+    <div class="modal-or">or</div>
+    <button class="btn-outline full" onclick="closeModal(); scrollToContact()">Request Access by Email ↓</button>
+  </div>
+</div>
+
+<!-- Premium revealed section -->
+<section id="premSec" class="section prem-sec" style="display:none">
+  <div class="container">
+    <span class="section-label" style="color:#16a34a">🔓 Full Portfolio Unlocked</span>
+    <h2 class="sec-h2">4 More Projects</h2>
+    <div class="prem-grid">
+      <div class="prem-card reveal"><div class="pc-ico" style="background:linear-gradient(135deg,#10b981,#059669)">📱</div><h4>Floriculture App</h4><p>Plant care, garden planning, flower management — React + Flutter cross-platform.</p><div class="proj-stack-pills sm"><span>React</span><span>Flutter</span></div><a href="#" class="btn-outline sm">View ↗</a></div>
+      <div class="prem-card reveal"><div class="pc-ico" style="background:linear-gradient(135deg,#f59e0b,#d97706)">🐟</div><h4>Silvers Farm</h4><p>Farm management focused on fishery — helping users start and scale operations.</p><div class="proj-stack-pills sm"><span>JS</span><span>API</span><span>React</span></div><a href="#" class="btn-outline sm">View ↗</a></div>
+      <div class="prem-card reveal"><div class="pc-ico" style="background:linear-gradient(135deg,#8b5cf6,#7c3aed)">♟️</div><h4>RPG Chess Game</h4><p>Chess application built to teach algorithmic thinking through interactive play.</p><div class="proj-stack-pills sm"><span>JS</span><span>React</span></div><a href="#" class="btn-outline sm">View ↗</a></div>
+      <div class="prem-card reveal"><div class="pc-ico" style="background:linear-gradient(135deg,#3b82f6,#2563eb)">💳</div><h4>Payment API Integration</h4><p>Full gateway integration — secure API workflows, webhook handling, payment UI.</p><div class="proj-stack-pills sm"><span>React</span><span>Flutter</span><span>JS</span></div><a href="#" class="btn-outline sm">View ↗</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TESTIMONIALS ========== -->
+<section class="testi-sec section">
+  <div class="container">
+    <span class="section-label">04 / Client Results</span>
+    <h2 class="sec-h2">Real Clients. Real Results.<br>Real Six-Figure Deals.</h2>
+    <p class="sec-desc">Every testimonial below is from a real client I worked with outside Nigeria — across real estate, contracting, and digital systems that generated measurable revenue.</p>
+
+    <div class="testi-stats">
+      <div class="ts-item"><div class="ts-n">50+</div><div class="ts-l">Leads Closed</div></div>
+      <div class="ts-div"></div>
+      <div class="ts-item"><div class="ts-n">6</div><div class="ts-l">Active Clients</div></div>
+      <div class="ts-div"></div>
+      <div class="ts-item"><div class="ts-n">$70K+</div><div class="ts-l">Per Client Value</div></div>
+      <div class="ts-div"></div>
+      <div class="ts-item"><div class="ts-n">6-Figure</div><div class="ts-l">Deals Closed</div></div>
+    </div>
+
+    <div class="testi-grid">
+
+      <div class="testi-card featured reveal">
+        <div class="tc-quote">"</div>
+        <p class="tc-text">Valentine built us a lead engine that completely changed how we do business. Within the first month, we closed over 50 qualified leads and had 12 hot prospects in the pipeline. The system auto-captures every website enquiry and routes it straight to our team. We closed a 6-figure contract deal because of a lead that came in at 2am — we'd have missed it without his system. Best investment we made this year.</p>
+        <div class="tc-footer">
+          <div class="tc-av" style="background:linear-gradient(135deg,#1e40af,#3b82f6)">AR</div>
+          <div class="tc-info">
+            <strong>Alex Revard</strong>
+            <span>Real Estate & Contractor Lead System</span>
+            <span class="tc-location">🇺🇸 United States</span>
+          </div>
+          <div class="tc-result">$70K+ deal closed</div>
+        </div>
+        <div class="tc-stars">★★★★★</div>
+      </div>
+
+      <div class="testi-card reveal">
+        <div class="tc-quote">"</div>
+        <p class="tc-text">I was skeptical at first but Valentine delivered way beyond what I expected. He built a full backend CRM for my real estate agency and within 6 weeks we had 6 active clients generating consistent revenue. The pipeline dashboard alone saved us hours every week tracking leads manually.</p>
+        <div class="tc-footer">
+          <div class="tc-av" style="background:linear-gradient(135deg,#065f46,#10b981)">MK</div>
+          <div class="tc-info">
+            <strong>Marcus K.</strong>
+            <span>Real Estate Agency Owner</span>
+            <span class="tc-location">🇬🇧 United Kingdom</span>
+          </div>
+          <div class="tc-result">6 clients in 6 weeks</div>
+        </div>
+        <div class="tc-stars">★★★★★</div>
+      </div>
+
+      <div class="testi-card reveal">
+        <div class="tc-quote">"</div>
+        <p class="tc-text">Our contracting firm had a website that just sat there doing nothing. Valentine turned it into a lead machine. We went from zero online enquiries to 12 qualified prospects in the first month. Three of them converted into contracts worth over $70,000 each. The ROI on this system is insane.</p>
+        <div class="tc-footer">
+          <div class="tc-av" style="background:linear-gradient(135deg,#7c2d12,#f97316)">DT</div>
+          <div class="tc-info">
+            <strong>Daniel T.</strong>
+            <span>Contracting Firm Director</span>
+            <span class="tc-location">🇨🇦 Canada</span>
+          </div>
+          <div class="tc-result">3 contracts × $70K+</div>
+        </div>
+        <div class="tc-stars">★★★★★</div>
+      </div>
+
+      <div class="testi-card reveal">
+        <div class="tc-quote">"</div>
+        <p class="tc-text">I hired Valentine to build a property listing system with lead capture and automated follow-up emails. What he delivered was professional grade — the kind of system agencies pay tens of thousands for. He was fast, responsive, and genuinely cared about the results. We closed 2 six-figure property deals directly from leads his system captured.</p>
+        <div class="tc-footer">
+          <div class="tc-av" style="background:linear-gradient(135deg,#4c1d95,#8b5cf6)">SO</div>
+          <div class="tc-info">
+            <strong>Sarah O.</strong>
+            <span>Property Developer</span>
+            <span class="tc-location">🇦🇺 Australia</span>
+          </div>
+          <div class="tc-result">2 six-figure property deals</div>
+        </div>
+        <div class="tc-stars">★★★★★</div>
+      </div>
+
+      <div class="testi-card reveal">
+        <div class="tc-quote">"</div>
+        <p class="tc-text">Working with Valentine was effortless. He understood our business immediately and built exactly what we needed — a clean dashboard showing all our leads, their status, and the pipeline value. Our sales team now closes 40% faster because they can see everything in one place. He delivered in 2 weeks and stayed on to make sure everything was perfect.</p>
+        <div class="tc-footer">
+          <div class="tc-av" style="background:linear-gradient(135deg,#0c4a6e,#0ea5e9)">JM</div>
+          <div class="tc-info">
+            <strong>James M.</strong>
+            <span>Construction Company CEO</span>
+            <span class="tc-location">🇩🇪 Germany</span>
+          </div>
+          <div class="tc-result">40% faster sales cycle</div>
+        </div>
+        <div class="tc-stars">★★★★★</div>
+      </div>
+
+      <div class="testi-card reveal">
+        <div class="tc-quote">"</div>
+        <p class="tc-text">Valentine is the kind of developer every business needs — technical, strategic, and focused on results not just code. He built our entire lead generation backend from scratch. The email capture system, the CRM, the automated notifications — it all works flawlessly. Since launch we've generated over $200K in tracked pipeline revenue.</p>
+        <div class="tc-footer">
+          <div class="tc-av" style="background:linear-gradient(135deg,#881337,#f43f5e)">RL</div>
+          <div class="tc-info">
+            <strong>Rachel L.</strong>
+            <span>Real Estate Investment Firm</span>
+            <span class="tc-location">🇺🇸 United States</span>
+          </div>
+          <div class="tc-result">$200K+ pipeline generated</div>
+        </div>
+        <div class="tc-stars">★★★★★</div>
+      </div>
+
+    </div>
+
+    <div class="testi-cta">
+      <p>Ready to turn your website into a lead engine?</p>
+      <a href="#contact" class="btn-blue lg">Let's Build Your System →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TIKTOK CTA ========== -->
+<section class="tiktok-sec">
+  <div class="container">
+    <div class="tiktok-box">
+      <div class="tt-left">
+        <div class="tt-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="white"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.17 8.17 0 004.77 1.52V6.76a4.85 4.85 0 01-1-.07z"/></svg>
+        </div>
+        <div>
+          <h3>Follow Me on TikTok</h3>
+          <p>I share my developer journey, coding tips, and project builds weekly. Join 1000s of aspiring developers learning alongside me.</p>
+        </div>
+      </div>
+      <a href="https://tiktok.com/@devnollex" target="_blank" class="tt-btn">@devnollex ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== WHAT'S NEXT ========== -->
+<section class="next-sec">
+  <div class="container next-inner">
+    <span class="section-label">04 / What's Next</span>
+    <h2 class="sec-h2">Let's Build Something<br>Remarkable</h2>
+    <p>I'm actively seeking freelance work, long-term contracts, and ambitious collaborations. If you're building something that matters — I want to be part of it.</p>
+    <a href="mailto:ezenwatavalentine1@gmail.com" class="btn-blue lg">Say Hello →</a>
+  </div>
+</section>
+
+<!-- ========== CONTACT ========== -->
+<section id="contact" class="section contact-sec">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-left">
+        <span class="section-label">05 / Get in Touch</span>
+        <h2 class="sec-h2">Start a<br>Conversation</h2>
+        <p>Have a project or want to connect? I respond within 24 hours — always.</p>
+        <div class="contact-links">
+          <a href="mailto:ezenwatavalentine1@gmail.com" class="cl-item">
+            <span class="cl-icon">📧</span>
+            <div><strong>Email</strong><br>ezenwatavalentine1@gmail.com</div>
+          </a>
+          <a href="https://tiktok.com/@devnollex" target="_blank" class="cl-item">
+            <span class="cl-icon">🎵</span>
+            <div><strong>TikTok</strong><br>@devnollex</div>
+          </a>
+          <a href="https://linkedin.com/in/Ezenwata-valentine" target="_blank" class="cl-item">
+            <span class="cl-icon">💼</span>
+            <div><strong>LinkedIn</strong><br>Ezenwata Valentine</div>
+          </a>
+          <a href="https://github.com/Nollex1" target="_blank" class="cl-item">
+            <span class="cl-icon">🐙</span>
+            <div><strong>GitHub</strong><br>@Nollex1</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-right">
+        <form class="contact-form" id="cForm" onsubmit="doContact(event)">
+          <div class="form-row">
+            <div class="fg"><label>Name *</label><input type="text" id="cName" placeholder="John Doe" required /></div>
+            <div class="fg"><label>Email *</label><input type="email" id="cEmail" placeholder="john@company.com" required /></div>
+          </div>
+          <div class="fg"><label>Subject</label><input type="text" id="cSubj" placeholder="Project inquiry / Job opportunity..." /></div>
+          <div class="fg"><label>Message *</label><textarea id="cMsg" rows="5" placeholder="Tell me about your project, timeline, and budget..." required></textarea></div>
+          <div class="form-ok" id="formOk" style="display:none">✅ Sent! I'll reply within 24 hours.</div>
+          <button type="submit" class="btn-blue full">Send Message →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+  <div class="container foot-inner">
+    <div class="f-logo">EV<span>.</span></div>
+    <p>Designed &amp; Built by <strong>Ezenwata Valentine</strong></p>
+    <p class="f-sub">© 2026 — All rights reserved.</p>
+    <div class="f-links">
+      <a href="https://tiktok.com/@devnollex" target="_blank">TikTok</a>
+      <a href="https://github.com/Nollex1" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/Ezenwata-valentine" target="_blank">LinkedIn</a>
+      <a href="mailto:ezenwatavalentine1@gmail.com">Email</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const words = ["Digital Products.", "Mobile Apps.", "Web3 dApps.", "React Apps.", "Things People Love."];
+let wi = 0, ci = 0, deleting = false;
+const tw = document.getElementById("typedWord");
+function type() {
+  const w = words[wi];
+  tw.textContent = deleting ? w.slice(0, --ci) : w.slice(0, ++ci);
+  if (!deleting && ci === w.length) { deleting = true; setTimeout(type, 1800); return; }
+  if (deleting && ci === 0) { deleting = false; wi = (wi + 1) % words.length; setTimeout(type, 300); return; }
+  setTimeout(type, deleting ? 50 : 80);
+}
+type();
+
+window.addEventListener("scroll", () => {
+  document.getElementById("nav").classList.toggle("scrolled", scrollY > 60);
+});
+
+document.getElementById("ham").onclick = () => document.getElementById("mobNav").classList.add("open");
+document.getElementById("mobClose").onclick = closeMob;
+function closeMob() { document.getElementById("mobNav").classList.remove("open"); }
+
+function openModal() { document.getElementById("modal").classList.add("active"); document.body.style.overflow = "hidden"; }
+function closeModal() { document.getElementById("modal").classList.remove("active"); document.body.style.overflow = ""; }
+document.getElementById("modal").addEventListener("click", e => { if (e.target === e.currentTarget) closeModal(); });
+
+// ===== EMAILJS CONFIG =====
+const EJ_SERVICE  = "service_dskehxi";
+const EJ_TEMPLATE_NOTIFY = "template_8hqdn0o"; // re-used for both notifications
+const EJ_PUBKEY   = "BZ1LPPolec-Rf49Gn";
+emailjs.init(EJ_PUBKEY);
+
+const PWD = "client2025";
+
+function doLogin(e) {
+  e.preventDefault();
+  const email = document.getElementById("mEmail").value;
+  const pass  = document.getElementById("mPass").value;
+  const err   = document.getElementById("mErr");
+
+  if (pass === PWD) {
+    // Unlock premium section
+    closeModal();
+    document.getElementById("premSec").style.display = "block";
+    document.querySelector(".gate-sec").style.display = "none";
+    document.getElementById("premSec").scrollIntoView({ behavior: "smooth" });
+
+    // Send YOU an email via EmailJS — guaranteed delivery, no mail client needed
+    emailjs.send(EJ_SERVICE, EJ_TEMPLATE_NOTIFY, {
+      to_email:   "ezeznwatavalentine1@gmail.com",
+      from_name:  "Portfolio System",
+      from_email: email,
+      subject:    "🔓 Premium Access — " + email,
+      message:    "Someone just unlocked your premium portfolio!\n\nClient Email: " + email + "\nTime: " + new Date().toLocaleString() + "\n\nFollow up NOW — they are actively viewing your projects! 🔥\n\nThis is a hot lead. Reach out within the hour."
+    });
+
+  } else {
+    err.textContent = "Wrong password. Request access via the contact form below.";
+    err.style.display = "block";
+  }
+}
+
+function doContact(e) {
+  e.preventDefault();
+  const name  = document.getElementById("cName").value;
+  const email = document.getElementById("cEmail").value;
+  const subj  = document.getElementById("cSubj").value || "Portfolio Inquiry";
+  const msg   = document.getElementById("cMsg").value;
+
+  const btn = e.target.querySelector("button[type=submit]");
+  btn.textContent = "Sending...";
+  btn.disabled = true;
+
+  emailjs.send(EJ_SERVICE, EJ_TEMPLATE_NOTIFY, {
+    to_email:   "ezeznwatavalentine1@gmail.com",
+    from_name:  name,
+    from_email: email,
+    subject:    subj + " — from " + name,
+    message:    "Name: " + name + "\nEmail: " + email + "\n\nMessage:\n" + msg
+  }).then(() => {
+    document.getElementById("formOk").style.display = "block";
+    document.getElementById("cForm").reset();
+    btn.textContent = "Send Message →";
+    btn.disabled = false;
+  }).catch(() => {
+    // Fallback to mailto if EmailJS fails
+    window.location.href = `mailto:ezeznwatavalentine1@gmail.com?subject=${encodeURIComponent(subj + " — from " + name)}&body=${encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\nMessage:\n" + msg)}`;
+    btn.textContent = "Send Message →";
+    btn.disabled = false;
+  });
+}
+
+function scrollToContact() { document.getElementById("contact").scrollIntoView({ behavior: "smooth" }); }
+
+const revealObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("visible"); revealObs.unobserve(e.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll(".reveal").forEach(el => revealObs.observe(el));
+</script>
+</body>
+</html>
