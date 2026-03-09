@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Ezenwata Valentine — Developer · Builder · Creator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- LIGHTBOX -->
+<div class="lb" id="lb" onclick="closeLb()">
+  <button class="lb-close" onclick="closeLb()">&#x2715;</button>
+  <button class="lb-prev" id="lbPrev" onclick="lbNav(-1,event)">&#x2039;</button>
+  <div class="lb-inner">
+    <img id="lbImg" src="" alt=""/>
+    <div class="lb-caption" id="lbCap"></div>
+  </div>
+  <button class="lb-next" id="lbNext" onclick="lbNav(1,event)">&#x203A;</button>
+</div>
+
+<!-- CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="#" class="nav-logo">EV<em>.</em></a>
+  <div class="nav-center">
+    <a href="#about">About</a>
+    <a href="#work">Work</a>
+    <a href="#experience">Experience</a>
+    <a href="#testimonials">Reviews</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="nav-right">
+    <button class="btn-ghost" onclick="Tawk_API.toggle()">&#x1F4AC; Chat</button>
+    <button class="nav-ham" id="ham"><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="mob-menu" id="mobMenu">
+  <button class="mob-x" id="mobX">&#x2715;</button>
+  <a href="#about" onclick="closeMob()">About</a>
+  <a href="#work" onclick="closeMob()">Work</a>
+  <a href="#experience" onclick="closeMob()">Experience</a>
+  <a href="#testimonials" onclick="closeMob()">Reviews</a>
+  <a href="#contact" onclick="closeMob()">Contact</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-grain"></div>
+  <div class="hero-left">
+    <div class="hero-eyebrow"><span class="pulse-ring"></span><span>Available for projects</span></div>
+    <h1 class="hero-h1">
+      <span class="line-a">Ezenwata</span>
+      <span class="line-b"><em>Valentine</em></span>
+    </h1>
+    <div class="hero-role-line">
+      <span class="role-bar"></span>
+      <span class="typed-wrap"><span id="typed"></span><span class="blink">|</span></span>
+    </div>
+    <p class="hero-p">Full-stack developer building luxury real estate platforms, interior design experiences, and mobile apps that close deals and define brands — for clients across Nigeria, the UK, US, Canada, Australia and Germany.</p>
+    <div class="hero-ctas">
+      <a href="#work" class="cta-primary">View My Work <span>&#x2197;</span></a>
+      <a href="#contact" class="cta-secondary">Start a Project</a>
+    </div>
+    <div class="hero-meta">
+      <div class="hm"><span class="hm-n">16+</span><span class="hm-l">Projects</span></div>
+      <div class="hm-sep"></div>
+      <div class="hm"><span class="hm-n">3+</span><span class="hm-l">Years</span></div>
+      <div class="hm-sep"></div>
+      <div class="hm"><span class="hm-n">$70K+</span><span class="hm-l">Per Client</span></div>
+      <div class="hm-sep"></div>
+      <div class="hm"><span class="hm-n">6</span><span class="hm-l">Domains</span></div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-photo-frame">
+      <div class="hpf-inner">
+        <img src="Ezenwata.jpg" alt="Ezenwata Valentine" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+        <div class="hpf-fallback">EV</div>
+      </div>
+      <div class="hpf-tag t1">&#x269B; React</div>
+      <div class="hpf-tag t2">&#x1F517; Web3</div>
+      <div class="hpf-tag t3">&#x1F4F1; Flutter</div>
+      <div class="hpf-label"><span>Developer</span><span>Nigeria &#x2197; Global</span></div>
+    </div>
+    <div class="hero-socials">
+      <a href="https://tiktok.com/@devnollex" target="_blank" class="hs-link">@devnollex</a>
+      <a href="https://github.com/Nollex1" target="_blank" class="hs-link">GitHub &#x2197;</a>
+      <a href="https://linkedin.com/in/ezenwata-valentine" target="_blank" class="hs-link">LinkedIn &#x2197;</a>
+    </div>
+  </div>
+  <div class="hero-scroll-hint"><div class="scroll-line"></div><span>Scroll</span></div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about-sec reveal-sec">
+  <div class="wrap">
+    <div class="sec-label">01 / About</div>
+    <div class="about-grid">
+      <div class="about-left">
+        <h2 class="display-h2">The person<br>behind the code</h2>
+      </div>
+      <div class="about-right">
+        <p>I'm <strong>Valentine</strong> — a self-taught full-stack developer who turns ideas into platforms that generate real revenue. Since 2023 I've built luxury real estate and interior design platforms for international clients who needed a digital presence as refined as their brand.</p>
+        <p>My clients come from the US, UK, Canada, Australia, and Germany — and within weeks of launch they're closing six-figure deals. I'm also a TikTok creator <a href="https://tiktok.com/@devnollex" target="_blank" class="text-link">@devnollex</a> documenting the build for the next generation of African developers.</p>
+        <div class="stack-block">
+          <div class="stack-label">Full Stack</div>
+          <div class="stack-chips">
+            <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>React.js</span><span>React Native</span><span>Flutter</span><span>Dart</span><span>Solidity</span><span>Node.js</span><span>MongoDB</span><span>PostgreSQL</span><span>REST APIs</span><span>Web3.js</span><span>Git</span>
+          </div>
+        </div>
+        <div class="about-facts">
+          <div class="af"><span>&#x1F4CD;</span><span>Nigeria — Delivering Globally</span></div>
+          <div class="af"><span>&#x1F680;</span><span>Founder — Udos Exchange (MVP)</span></div>
+          <div class="af"><span>&#x1F3AC;</span><span>TikTok Content Creator @devnollex</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK -->
+<section id="work" class="work-sec">
+  <div class="wrap work-top">
+    <div class="sec-label">02 / Featured Work</div>
+    <div class="work-header">
+      <h2 class="display-h2">Real projects.<br>Real screenshots.<br>Real clients.</h2>
+      <p class="work-sub">Click any screenshot to zoom. Every project below was built for a real client or shipped as a live product.</p>
+    </div>
+  </div>
+
+  <!-- ══════ DOMUS ══════ -->
+  <div class="proj-block reveal-sec" id="proj-domus">
+    <div class="pb-header">
+      <div class="pb-meta">
+        <div class="pb-badge">&#x1F464; Client Delivered &middot; Live</div>
+        <div class="pb-cat">Real Estate Platform &middot; Abuja, Nigeria</div>
+      </div>
+      <div class="pb-links">
+        <a href="https://nollex1.github.io/Domus-Project-/" target="_blank" class="cta-primary sm">GitHub &#x2197;</a>
+        <button onclick="Tawk_API.toggle()" class="cta-secondary sm">Ask About This</button>
+      </div>
+    </div>
+    <div class="pb-content">
+      <div class="pb-info">
+        <h3 class="pb-title">Domus Projects<br><em>Real Estate Solution</em></h3>
+        <p>A full luxury real estate platform for Domus Projects Solution in Abuja, Nigeria. Features property listings with real photos, filter tabs (All / For Sale / For Rent / Duplex / Apartment), WhatsApp contact, about section, and a complete property gallery. Built to match the premium quality of their properties.</p>
+        <div class="pb-feats">
+          <div>&#x2014; Property listings with real Abuja property photos</div>
+          <div>&#x2014; Filter tabs — All, For Sale, For Rent, Duplex, Apartment</div>
+          <div>&#x2014; WhatsApp CTA + contact agent buttons on every listing</div>
+          <div>&#x2014; About section with trust signals — Verified Listings, NHF Loan Help</div>
+          <div>&#x2014; Full gallery with real property images</div>
+        </div>
+        <div class="pb-stack">HTML &middot; CSS &middot; JavaScript</div>
+      </div>
+      <div class="pb-shots">
+        <div class="ps-main" onclick="openLb('screenshots/domus-1.png','Domus Projects — Hero',['screenshots/domus-1.png','screenshots/domus-2.png','screenshots/domus-3.png','screenshots/domus-4.png'])">
+          <img src="Domus.png" alt="Domus Hero"/>
+          <div class="ps-zoom-hint">&#x1F50D; Click to zoom</div>
+        </div>
+        <div class="ps-thumbs">
+          <div class="ps-thumb" onclick="openLb('screenshots/domus-2.png','Domus Projects — Listings',['screenshots/domus-1.png','screenshots/domus-2.png','screenshots/domus-3.png','screenshots/domus-4.png'])"><img src="Domus-1.png" alt="Domus Listings"/></div>
+          <div class="ps-thumb" onclick="openLb('screenshots/domus-3.png','Domus Projects — More Listings',['screenshots/domus-1.png','screenshots/domus-2.png','screenshots/domus-3.png','screenshots/domus-4.png'])"><img src="Domus-2.png" alt="Domus More"/></div>
+          <div class="ps-thumb" onclick="openLb('screenshots/domus-4.png','Domus Projects — About Section',['screenshots/domus-1.png','screenshots/domus-2.png','screenshots/domus-3.png','screenshots/domus-4.png'])"><img src="Domus-3.png" alt="Domus About"/></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════ INTERIORS BY LHAIDE ══════ -->
+  <div class="proj-block proj-block-alt reveal-sec" id="proj-lhaide">
+    <div class="pb-header">
+      <div class="pb-meta">
+        <div class="pb-badge">&#x2713; Live on GitHub Pages</div>
+        <div class="pb-cat">Interior Design Studio &middot; Ibadan, Nigeria</div>
+      </div>
+      <div class="pb-links">
+        <a href="https://nollex1.github.io/Interiors_by_lhaide/" target="_blank" class="cta-primary sm">Live Demo &#x2197;</a>
+        <a href="https://github.com/Nollex1/Interiors_by_lhaide" target="_blank" class="cta-secondary sm">GitHub &#x2197;</a>
+      </div>
+    </div>
+    <div class="pb-content pb-content-rev">
+      <div class="pb-shots">
+        <div class="ps-main" onclick="openLb('screenshots/interiors-1.png','Interiors by Lhaide — Hero',['screenshots/interiors-1.png','screenshots/interiors-2.png','screenshots/interiors-3.png'])">
+          <img src="InteriorsbyLhaide.png" alt="Interiors by Lhaide Hero"/>
+          <div class="ps-zoom-hint">&#x1F50D; Click to zoom</div>
+        </div>
+        <div class="ps-thumbs">
+          <div class="ps-thumb" onclick="openLb('screenshots/interiors-2.png','Interiors by Lhaide — About',['screenshots/interiors-1.png','screenshots/interiors-2.png','screenshots/interiors-3.png'])"><img src="InteriorsbyLhaide Story.png" alt="About Studio"/></div>
+          <div class="ps-thumb" onclick="openLb('screenshots/interiors-3.png','Interiors by Lhaide — Instagram Feed',['screenshots/interiors-1.png','screenshots/interiors-2.png','screenshots/interiors-3.png'])"><img src="InteriorsbyLhaide IG.png" alt="Instagram Gallery"/></div>
+        </div>
+      </div>
+      <div class="pb-info">
+        <h3 class="pb-title">Interiors by Lhaide<br><em>Design Studio Site</em></h3>
+        <p>A luxury interior design website for Lhaide's studio in Ibadan, Nigeria. Warm taupe and gold branding, portfolio showcase with real project photos, Instagram feed integration, about section with CAC and SMEDAN certifications, and a WhatsApp quote CTA. Live on GitHub Pages.</p>
+        <div class="pb-feats">
+          <div>&#x2014; Hero with "Transforming Spaces with Style &amp; Comfort"</div>
+          <div>&#x2014; Real project photos — marble walls, kitchen designs, living rooms</div>
+          <div>&#x2014; Instagram feed section pulling @interiors_by_lhaide</div>
+          <div>&#x2014; CAC Registered + SMEDAN Certified trust badges</div>
+          <div>&#x2014; WhatsApp quote button + Get a Quote CTA</div>
+        </div>
+        <div class="pb-stack">HTML &middot; CSS &middot; JavaScript</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════ ELITE DECOR ══════ -->
+  <div class="proj-block reveal-sec" id="proj-elite">
+    <div class="pb-header">
+      <div class="pb-meta">
+        <div class="pb-badge">&#x2713; Live on GitHub Pages</div>
+        <div class="pb-cat">Luxury Interior Finishing &middot; Malappuram, Kerala</div>
+      </div>
+      <div class="pb-links">
+        <a href="https://nollex1.github.io/Elito-Decor/" target="_blank" class="cta-primary sm">Live Demo &#x2197;</a>
+        <a href="https://github.com/Nollex1/Elito-Decor" target="_blank" class="cta-secondary sm">GitHub &#x2197;</a>
+      </div>
+    </div>
+    <div class="pb-content">
+      <div class="pb-info">
+        <h3 class="pb-title">Elite Decor<br><em>Luxury Interior Finishing</em></h3>
+        <p>A premium dark-theme website for Elite Decor — specialists in aluminium systems, modular kitchens, glass works and luxury interior finishing in Kerala, India. Features a cinematic hero with real project imagery, 4-step process flow, location section, and WhatsApp direct contact. Live on GitHub Pages.</p>
+        <div class="pb-feats">
+          <div>&#x2014; Dark luxury hero — "Elevating Spaces with Precision &amp; Luxury"</div>
+          <div>&#x2014; 150+ Projects Done, 8+ Years Active, 100% Satisfaction stats</div>
+          <div>&#x2014; 4-step process: Consultation &#x2192; Design &#x2192; Fabrication &#x2192; Handover</div>
+          <div>&#x2014; Location section with full contact details</div>
+          <div>&#x2014; Floating WhatsApp button throughout</div>
+        </div>
+        <div class="pb-stack">HTML &middot; CSS &middot; JavaScript</div>
+      </div>
+      <div class="pb-shots">
+        <div class="ps-main" onclick="openLb('screenshots/elite-1.png','Elite Decor — Hero',['screenshots/elite-1.png','screenshots/elite-2.png','screenshots/elite-3.png'])">
+          <img src="Elite Decor.png" alt="Elite Decor Hero"/>
+          <div class="ps-zoom-hint">&#x1F50D; Click to zoom</div>
+        </div>
+        <div class="ps-thumbs">
+          <div class="ps-thumb" onclick="openLb('screenshots/elite-2.png','Elite Decor — Process',['screenshots/elite-1.png','screenshots/elite-2.png','screenshots/elite-3.png'])"><img src="Elite Based.png" alt="Elite Decor Process"/></div>
+          <div class="ps-thumb" onclick="openLb('screenshots/elite-3.png','Elite Decor — Location',['screenshots/elite-1.png','screenshots/elite-2.png','screenshots/elite-3.png'])"><img src="Elite Process.png" alt="Elite Decor Location"/></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════ AYB STANDARD ══════ -->
+  <div class="proj-block proj-block-alt reveal-sec" id="proj-ayb">
+    <div class="pb-header">
+      <div class="pb-meta">
+        <div class="pb-badge">&#x2713; Live on GitHub Pages</div>
+        <div class="pb-cat">Bespoke Furniture &amp; Interiors &middot; Lekki, Lagos</div>
+      </div>
+      <div class="pb-links">
+        <a href="https://nollex1.github.io/AYB-Projects/" target="_blank" class="cta-primary sm">Live Demo &#x2197;</a>
+        <a href="https://github.com/Nollex1/AYB-Projects" target="_blank" class="cta-secondary sm">GitHub &#x2197;</a>
+      </div>
+    </div>
+    <div class="pb-content pb-content-rev">
+      <div class="pb-shots">
+        <div class="ps-main" onclick="openLb('screenshots/ayb-1.png','AYB Standard — Hero',['screenshots/ayb-1.png','screenshots/ayb-2.png','screenshots/ayb-3.png'])">
+          <img src="AYB ST.png" alt="AYB Standard Hero"/>
+          <div class="ps-zoom-hint">&#x1F50D; Click to zoom</div>
+        </div>
+        <div class="ps-thumbs">
+          <div class="ps-thumb" onclick="openLb('screenshots/ayb-2.png','AYB Standard — Featured Projects',['screenshots/ayb-1.png','screenshots/ayb-2.png','screenshots/ayb-3.png'])"><img src="AYB Projects.png" alt="AYB Projects"/></div>
+          <div class="ps-thumb" onclick="openLb('screenshots/ayb-3.png','AYB Standard — Gallery',['screenshots/ayb-1.png','screenshots/ayb-2.png','screenshots/ayb-3.png'])"><img src="AYB Gallery.png" alt="AYB Gallery"/></div>
+        </div>
+      </div>
+      <div class="pb-info">
+        <h3 class="pb-title">AYB Standard<br><em>Furniture &amp; Interiors</em></h3>
+        <p>A luxury bespoke furniture and interior installations website for AYB Standard — CAC Registered, based in Lekki, Lagos. "Transforming Spaces into Masterpieces." Features real project photography, a full gallery with completed installations, and a consultation booking system. Live on GitHub Pages.</p>
+        <div class="pb-feats">
+          <div>&#x2014; Full-bleed hero with real luxury interior photography</div>
+          <div>&#x2014; Featured Projects — Luxury Living Room Suite, Marble &amp; LED TV Wall</div>
+          <div>&#x2014; Complete Project Gallery — real installation photos</div>
+          <div>&#x2014; CAC Registered Reg. No. 7402944 trust badge</div>
+          <div>&#x2014; Request a Consultation CTA</div>
+        </div>
+        <div class="pb-stack">HTML &middot; CSS &middot; JavaScript</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════ BINABROTHERS ══════ -->
+  <div class="proj-block reveal-sec" id="proj-bina">
+    <div class="pb-header">
+      <div class="pb-meta">
+        <div class="pb-badge">&#x2713; Live on GitHub Pages</div>
+        <div class="pb-cat">Construction Specialists &middot; Nigeria</div>
+      </div>
+      <div class="pb-links">
+        <a href="https://nollex1.github.io/BinaBrothers/" target="_blank" class="cta-primary sm">Live Demo &#x2197;</a>
+        <a href="https://github.com/Nollex1/BinaBrothers" target="_blank" class="cta-secondary sm">GitHub &#x2197;</a>
+      </div>
+    </div>
+    <div class="pb-content">
+      <div class="pb-info">
+        <h3 class="pb-title">Bina Brothers<br><em>Construction Specialists</em></h3>
+        <p>A bold construction company website for Bina Brothers — residential and commercial construction specialists. Dark theme with red/white branding, full-bleed hero with real construction site photography, services section, and an "About" section with trust values. "Building Spaces That Stand The Test Of Time." Live on GitHub Pages.</p>
+        <div class="pb-feats">
+          <div>&#x2014; Bold hero: "Building Spaces That STAND The Test Of Time"</div>
+          <div>&#x2014; Stats: 25+ Years Active, 400+ Projects Done, 98% On-Time</div>
+          <div>&#x2014; 4 Services: Residential, Renovation, Structural Works, Project Mgmt</div>
+          <div>&#x2014; "Built on Integrity, Driven by Craft" about section</div>
+          <div>&#x2014; Get a Quote CTA</div>
+        </div>
+        <div class="pb-stack">HTML &middot; CSS &middot; JavaScript</div>
+      </div>
+      <div class="pb-shots">
+        <div class="ps-main" onclick="openLb('screenshots/bina-1.png','Bina Brothers — Hero',['screenshots/bina-1.png','screenshots/bina-2.png','screenshots/bina-3.png'])">
+          <img src="Bina Brothers.png" alt="Bina Brothers Hero"/>
+          <div class="ps-zoom-hint">&#x1F50D; Click to zoom</div>
+        </div>
+        <div class="ps-thumbs">
+          <div class="ps-thumb" onclick="openLb('screenshots/bina-2.png','Bina Brothers — About',['screenshots/bina-1.png','screenshots/bina-2.png','screenshots/bina-3.png'])"><img src="Bina Brothers.png" alt="Bina About"/></div>
+          <div class="ps-thumb" onclick="openLb('screenshots/bina-3.png','Bina Brothers — Services',['screenshots/bina-1.png','screenshots/bina-2.png','screenshots/bina-3.png'])"><img src="Bina Brothers.png" alt="Bina Services"/></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════ ZILLOW CLONE ══════ -->
+  <div class="proj-block proj-block-alt reveal-sec" id="proj-zillow">
+    <div class="pb-header">
+      <div class="pb-meta">
+        <div class="pb-badge">&#x1F3C6; Showcase Build</div>
+        <div class="pb-cat">Zillow Agent Profile Clone &middot; New York</div>
+      </div>
+      <div class="pb-links">
+        <a href="https://github.com/Nollex1/zillowRealestate" target="_blank" class="cta-primary sm">GitHub &#x2197;</a>
+        <button onclick="Tawk_API.toggle()" class="cta-secondary sm">Ask About This</button>
+      </div>
+    </div>
+    <div class="pb-content pb-content-rev">
+      <div class="pb-shots">
+        <div class="ps-main" onclick="openLb('screenshots/zillow-1.png','Zillow Clone — Agent Profile',['screenshots/zillow-1.png','screenshots/zillow-2.png'])">
+          <img src="Zillow.png" alt="Zillow Agent Profile"/>
+          <div class="ps-zoom-hint">&#x1F50D; Click to zoom</div>
+        </div>
+        <div class="ps-thumbs">
+          <div class="ps-thumb wide-thumb" onclick="openLb('screenshots/zillow-2.png','Zillow Clone — Property Gallery',['screenshots/zillow-1.png','screenshots/zillow-2.png'])"><img src="Zillow.png" alt="Zillow Gallery"/></div>
+        </div>
+      </div>
+      <div class="pb-info">
+        <h3 class="pb-title">Zillow Clone<br><em>Agent Profile Page</em></h3>
+        <p>A pixel-perfect Zillow agent profile page clone — complete with agent headshot, recent sales with real property photos, stats (20 sales / 878 total / $25K–$710K price range), bio section, and a property photo gallery. Built to demonstrate full Zillow-level UX capability to real estate clients.</p>
+        <div class="pb-feats">
+          <div>&#x2014; Agent profile with photo, ratings, and 37 reviews</div>
+          <div>&#x2014; Recent sales with real property photos — Troy, Albany, Delmar NY</div>
+          <div>&#x2014; Stats: 878 total sales, $25K–$710K price range</div>
+          <div>&#x2014; Full property photo gallery (12+ listings)</div>
+          <div>&#x2014; Contact form with Call Agent button</div>
+        </div>
+        <div class="pb-stack">HTML &middot; CSS &middot; JavaScript</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════ APPS ROW ══════ -->
+  <div class="wrap">
+    <div class="apps-row reveal-sec">
+      <div class="apps-header">
+        <h3 class="display-h2" style="font-size:1.8rem">Mobile Apps I Built</h3>
+        <p>Two shipped mobile applications — one in the App Store, one seeking investment.</p>
+      </div>
+      <div class="apps-grid">
+        <!-- Focus App -->
+        <div class="app-card">
+          <div class="app-icon-area focus-icon">
+            <div class="app-icon">&#x23F0;</div>
+          </div>
+          <div class="app-info">
+            <div class="app-cat">React Native &middot; Expo &middot; TypeScript</div>
+            <h4>Focus Reminder App</h4>
+            <p>A minimalist daily planning and reminder app built with Expo and React Native. Pomodoro timer, task checklist, daily goals, and focus session tracking. Clean, minimal UI designed for deep work.</p>
+            <div class="app-feats">
+              <span>&#x23F1; Pomodoro Timer</span>
+              <span>&#x2611; Task Checklist</span>
+              <span>&#x1F4C5; Daily Planner</span>
+              <span>&#x1F4CA; Focus Stats</span>
+            </div>
+            <div class="app-btns">
+              <a href="https://github.com/Nollex1/Focus-app" target="_blank" class="cta-primary sm">GitHub &#x2197;</a>
+            </div>
+          </div>
+        </div>
+        <!-- Udos Exchange -->
+        <div class="app-card udos-app">
+          <div class="app-icon-area udos-icon">
+            <div class="app-icon">&#x1F48E;</div>
+            <div class="app-mvp-badge">MVP &#x2713;</div>
+          </div>
+          <div class="app-info">
+            <div class="app-cat">Flutter &middot; Dart &middot; REST API</div>
+            <h4>Udos Exchange</h4>
+            <p>A gift card buying and selling platform for Nigerians and diaspora — trade Amazon, iTunes, Steam, and Google Play cards at live market rates. MVP fully built and tested. Seeking strategic investors to scale.</p>
+            <div class="app-feats">
+              <span>&#x1F6D2; Buy &amp; Sell Cards</span>
+              <span>&#x1F4C8; Live Market Rates</span>
+              <span>&#x26A1; Instant Processing</span>
+              <span>&#x1F1F3;&#x1F1EC; Built for Nigeria</span>
+            </div>
+            <div class="udos-invest-note">
+              &#x1F4BC; Seeking investors — <button onclick="Tawk_API.toggle()" class="text-btn">Chat to learn more &#x2192;</button>
+            </div>
+            <div class="app-btns">
+              <a href="https://github.com/Nollex1/giftcard-marketplace-mvp" target="_blank" class="cta-primary sm">GitHub &#x2197;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MORE -->
+    <div class="more-strip reveal-sec">
+      <div class="ms-l"><h3>More on GitHub</h3><p>Web3 dApps, chess engines, logistics systems, and more.</p></div>
+      <div class="ms-tags">
+        <span>Hauntedchain dApp</span><span>Fairex Shipment</span><span>QuestForge RPG</span>
+        <span>Floriculture App</span><span>Silvers Farm</span><span>RPG Chess</span>
+        <span>Auth System</span><span>Data Dashboard</span>
+      </div>
+      <a href="https://github.com/Nollex1" target="_blank" class="cta-primary">View All &#x2197;</a>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="exp-sec reveal-sec">
+  <div class="wrap">
+    <div class="sec-label">03 / Experience</div>
+    <h2 class="display-h2">Where I've built<br>&amp; grown</h2>
+    <div class="exp-grid">
+      <div class="exp-card reveal-item"><div class="ec-yr">2025 — Present</div><div class="ec-role">Freelance Full-Stack Developer</div><div class="ec-co">International Clients &middot; Upwork</div><p>Delivering real estate platforms, interior design sites, mobile apps, and logistics systems for clients in the US, UK, Canada, Australia, and Germany. Closed $70K+ per client.</p></div>
+      <div class="exp-card reveal-item"><div class="ec-yr">2025 — Present</div><div class="ec-role">Founder — Udos Exchange</div><div class="ec-co">MVP Stage</div><p>Building a gift card exchange platform for Nigerians and diaspora. MVP fully built and tested. Seeking investors. <button onclick="Tawk_API.toggle()" class="text-btn">Chat to invest &#x2192;</button></p></div>
+      <div class="exp-card reveal-item"><div class="ec-yr">2024 — Present</div><div class="ec-role">TikTok Developer Creator</div><div class="ec-co">@devnollex</div><p>Weekly developer content — project builds, coding tips, and the African tech scene. Building a community of aspiring developers who follow the journey.</p></div>
+      <div class="exp-card reveal-item"><div class="ec-yr">2024</div><div class="ec-role">Technical Writer &amp; Developer</div><div class="ec-co">Hashnode</div><p>Built a responsive platform and published technical articles combining real-world code with practical developer insights.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="testi-sec reveal-sec">
+  <div class="wrap">
+    <div class="sec-label">04 / Client Results</div>
+    <h2 class="display-h2">Real clients.<br>Real results.</h2>
+    <div class="testi-nums">
+      <div class="tnum"><div class="tnum-n">50+</div><div class="tnum-l">Leads Closed</div></div>
+      <div class="tnum-sep"></div>
+      <div class="tnum"><div class="tnum-n">6</div><div class="tnum-l">Active Clients</div></div>
+      <div class="tnum-sep"></div>
+      <div class="tnum"><div class="tnum-n">$70K+</div><div class="tnum-l">Per Client</div></div>
+      <div class="tnum-sep"></div>
+      <div class="tnum"><div class="tnum-n">6-Fig</div><div class="tnum-l">Deals Closed</div></div>
+    </div>
+    <div class="testi-hero reveal-item">
+      <div class="th-quote">&#x201C;</div>
+      <p class="th-text">Valentine built us a lead system that completely transformed how we operate. Within the first month we closed over 50 qualified leads and had 12 hot prospects in the pipeline. We captured a 6-figure contract from a lead that came in at 2am — we would have missed it entirely without his system.</p>
+      <div class="th-footer">
+        <div class="th-av" style="background:linear-gradient(135deg,#7f1d1d,#c0392b)">AR</div>
+        <div class="th-info"><strong>Alex Revard</strong><span>Real Estate &amp; Contractor Systems &middot; &#x1F1FA;&#x1F1F8; US</span></div>
+        <div class="th-result">$70K+ deal closed</div>
+      </div>
+    </div>
+    <div class="testi-grid">
+      <div class="tc reveal-item"><p class="tc-q">&#x201C;</p><p>"He delivered a full CRM backend in 2 weeks. Within 6 weeks we had 6 active clients generating consistent revenue."</p><div class="tc-foot"><div class="tc-av" style="background:#1c1917">MK</div><div><strong>Marcus K.</strong><span>&#x1F1EC;&#x1F1E7; UK &middot; Real Estate Agency</span></div><div class="tc-res">6 clients &middot; 6 weeks</div></div></div>
+      <div class="tc reveal-item"><p class="tc-q">&#x201C;</p><p>"Three contracts worth $70K+ each. We went from zero enquiries to 12 qualified prospects in the first month."</p><div class="tc-foot"><div class="tc-av" style="background:#78350f">DT</div><div><strong>Daniel T.</strong><span>&#x1F1E8;&#x1F1E6; Canada &middot; Contracting Firm</span></div><div class="tc-res">3 &#xD7; $70K+</div></div></div>
+      <div class="tc reveal-item"><p class="tc-q">&#x201C;</p><p>"Closed 2 six-figure property deals in 60 days. The luxury platform matched our brand — clients commented on it immediately."</p><div class="tc-foot"><div class="tc-av" style="background:#4c1d95">SO</div><div><strong>Sarah O.</strong><span>&#x1F1E6;&#x1F1FA; Australia &middot; Property Developer</span></div><div class="tc-res">2 &#xD7; 6-fig</div></div></div>
+      <div class="tc reveal-item"><p class="tc-q">&#x201C;</p><p>"Our sales team closes 40% faster. Everything tracked in one place. Delivered in 2 weeks and stayed to make sure everything was perfect."</p><div class="tc-foot"><div class="tc-av" style="background:#0c4a6e">JM</div><div><strong>James M.</strong><span>&#x1F1E9;&#x1F1EA; Germany &middot; Construction CEO</span></div><div class="tc-res">40% faster</div></div></div>
+    </div>
+    <div class="testi-cta reveal-item"><p>Ready to get results like these?</p><a href="#contact" class="cta-primary lg">Start a Project &#x2192;</a></div>
+  </div>
+</section>
+
+<!-- TIKTOK BAND -->
+<div class="tiktok-band">
+  <div class="wrap ttb-inner">
+    <div class="ttb-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.17 8.17 0 004.77 1.52V6.76a4.85 4.85 0 01-1-.07z"/></svg></div>
+    <div><div class="ttb-title">Follow the Build Journey</div><div class="ttb-sub">Weekly developer content — real projects, real process, building from Nigeria.</div></div>
+    <a href="https://tiktok.com/@devnollex" target="_blank" class="ttb-btn">@devnollex &#x2197;</a>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-sec reveal-sec">
+  <div class="wrap">
+    <div class="sec-label">05 / Get in Touch</div>
+    <div class="contact-grid">
+      <div class="contact-left">
+        <h2 class="display-h2">Let's build<br>something great</h2>
+        <p>Project, job offer, or investment in Udos Exchange — I respond within 24 hours. Or hit live chat for an instant reply.</p>
+        <div class="contact-ways">
+          <a href="mailto:ezeznwatavalentine1@gmail.com" class="cw"><div class="cw-i">&#x1F4E7;</div><div><strong>Email</strong><p>ezeznwatavalentine1@gmail.com</p></div><span>&#x2192;</span></a>
+          <button onclick="Tawk_API.toggle()" class="cw cw-chat"><div class="cw-i">&#x1F4AC;</div><div><strong>Live Chat</strong><p>Instant reply — I'm online</p></div><span>&#x2192;</span></button>
+          <a href="https://tiktok.com/@devnollex" target="_blank" class="cw"><div class="cw-i">&#x1F3B5;</div><div><strong>TikTok</strong><p>@devnollex</p></div><span>&#x2192;</span></a>
+          <a href="https://linkedin.com/in/ezenwata-valentine" target="_blank" class="cw"><div class="cw-i">&#x1F4BC;</div><div><strong>LinkedIn</strong><p>Ezenwata Valentine</p></div><span>&#x2192;</span></a>
+        </div>
+      </div>
+      <div class="contact-right">
+        <form id="cf" class="cf" onsubmit="submitForm(event)">
+          <div class="cf-row"><div class="cfg"><label>Name *</label><input type="text" id="cfN" placeholder="Your name" required/></div><div class="cfg"><label>Email *</label><input type="email" id="cfE" placeholder="your@email.com" required/></div></div>
+          <div class="cfg"><label>Subject</label><input type="text" id="cfS" placeholder="Real estate platform &middot; Job offer &middot; Udos investment..."/></div>
+          <div class="cfg"><label>Message *</label><textarea id="cfM" rows="5" placeholder="Tell me about your project, timeline, and budget..." required></textarea></div>
+          <div class="cf-ok" id="cfOk" style="display:none">&#x2705; Sent! I'll reply within 24 hours.</div>
+          <button type="submit" class="cta-primary full">Send Message &#x2192;</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="f-top"><div class="f-logo">EV<em>.</em></div><div class="f-links"><a href="https://tiktok.com/@devnollex" target="_blank">TikTok</a><a href="https://github.com/Nollex1" target="_blank">GitHub</a><a href="https://linkedin.com/in/ezenwata-valentine" target="_blank">LinkedIn</a><a href="mailto:ezeznwatavalentine1@gmail.com">Email</a></div></div>
+    <div class="f-div"></div>
+    <div class="f-bot"><span>&#xA9; 2025 Ezenwata Valentine</span><span>Built by Valentine &middot; @devnollex</span></div>
+  </div>
+</footer>
+
+<!-- TAWK.TO -->
+<script>
+var Tawk_API=Tawk_API||{},Tawk_LoadStart=new Date();
+(function(){var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;s1.src='https://embed.tawk.to/69ace774ddd7fc1c348528e3/default';
+s1.charset='UTF-8';s1.setAttribute('crossorigin','*');s0.parentNode.insertBefore(s1,s0);})();
+
+// CURSOR
+const cursor=document.getElementById('cursor'),dot=document.getElementById('cursorDot');
+let mx=0,my=0,cx=0,cy=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.left=mx+'px';dot.style.top=my+'px';});
+(function loop(){cx+=(mx-cx)*0.1;cy+=(my-cy)*0.1;cursor.style.left=cx+'px';cursor.style.top=cy+'px';requestAnimationFrame(loop);})();
+document.querySelectorAll('a,button,.ps-main,.ps-thumb').forEach(el=>{el.addEventListener('mouseenter',()=>cursor.classList.add('ch'));el.addEventListener('mouseleave',()=>cursor.classList.remove('ch'));});
+
+// NAV + MOBILE
+window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('scrolled',scrollY>60));
+document.getElementById('ham').onclick=()=>document.getElementById('mobMenu').classList.add('open');
+document.getElementById('mobX').onclick=closeMob;
+function closeMob(){document.getElementById('mobMenu').classList.remove('open');}
+
+// TYPED
+const words=["Real Estate Platforms.","Interior Design Sites.","Mobile Apps.","Web3 dApps.","Things That Close Deals."];
+let wi=0,ci=0,del=false;
+const tw=document.getElementById('typed');
+function type(){const w=words[wi];tw.textContent=del?w.slice(0,--ci):w.slice(0,++ci);if(!del&&ci===w.length){del=true;setTimeout(type,2000);return;}if(del&&ci===0){del=false;wi=(wi+1)%words.length;setTimeout(type,300);return;}setTimeout(type,del?45:75);}
+type();
+
+// REVEAL
+const obs=new IntersectionObserver(e=>e.forEach(i=>{if(i.isIntersecting){i.target.classList.add('in-view');obs.unobserve(i.target);}}),{threshold:0.06});
+document.querySelectorAll('.reveal-sec,.reveal-item,.exp-card').forEach(el=>obs.observe(el));
+
+// LIGHTBOX
+let lbImgs=[],lbIdx=0;
+function openLb(src,cap,imgs){
+  lbImgs=imgs||[src]; lbIdx=lbImgs.indexOf(src);
+  document.getElementById('lbImg').src=src;
+  document.getElementById('lbCap').textContent=cap||'';
+  document.getElementById('lb').classList.add('lb-open');
+  document.getElementById('lbPrev').style.display=lbImgs.length>1?'flex':'none';
+  document.getElementById('lbNext').style.display=lbImgs.length>1?'flex':'none';
+  document.body.style.overflow='hidden';
+}
+function closeLb(){document.getElementById('lb').classList.remove('lb-open');document.body.style.overflow='';}
+function lbNav(dir,e){e.stopPropagation();lbIdx=(lbIdx+dir+lbImgs.length)%lbImgs.length;document.getElementById('lbImg').src=lbImgs[lbIdx];}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLb();if(e.key==='ArrowLeft')lbNav(-1,{stopPropagation:()=>{}});if(e.key==='ArrowRight')lbNav(1,{stopPropagation:()=>{}});});
+
+// CONTACT
+function submitForm(e){e.preventDefault();const n=document.getElementById('cfN').value,em=document.getElementById('cfE').value,s=document.getElementById('cfS').value||'Inquiry',m=document.getElementById('cfM').value;window.location.href=`mailto:ezeznwatavalentine1@gmail.com?subject=${encodeURIComponent(s+' - '+n)}&body=${encodeURIComponent('Name: '+n+'\nEmail: '+em+'\n\n'+m)}`;document.getElementById('cfOk').style.display='block';document.getElementById('cf').reset();}
+</script>
+</body>
+</html>
